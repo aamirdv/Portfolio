@@ -2,7 +2,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:A8C0FF,50:C2A8FF,100:FFD6E8&height=170&section=header&text=Portfolio&fontSize=42&fontColor=FFFFFF&animation=fadeIn&fontAlignY=42" width="100%"/>
 
-<h3>My personal portfolio website — built with React &amp; TypeScript</h3>
+<h3>My personal portfolio website</h3>
 
 <a href="https://aamirdv.github.io/Portfolio/"><img src="https://img.shields.io/badge/Live%20Site-6A5AF9?style=for-the-badge&logo=vercel&logoColor=white" /></a>
 <img src="https://img.shields.io/github/deployments/aamirdv/Portfolio/github-pages?style=for-the-badge&label=deploy&color=A8C0FF" />
