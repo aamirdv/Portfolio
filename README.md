@@ -6,7 +6,6 @@
 
 <a href="https://aamirdv.github.io/Portfolio/"><img src="https://img.shields.io/badge/Live%20Site-6A5AF9?style=for-the-badge&logo=vercel&logoColor=white" /></a>
 <img src="https://img.shields.io/github/deployments/aamirdv/Portfolio/github-pages?style=for-the-badge&label=deploy&color=A8C0FF" />
-<img src="https://img.shields.io/github/license/aamirdv/Portfolio?style=for-the-badge&color=C2A8FF" />
 
 </div>
 
@@ -78,12 +77,6 @@ Every push to `master` triggers a GitHub Actions workflow that builds the projec
 ## What I learned
 
 Building this taught me a lot about setting up CI/CD from scratch — getting GitHub Actions to reliably build and deploy on every push took some trial and error, especially around getting the base path right for GitHub Pages. It also pushed me to think more about component structure and keeping the codebase easy to extend as I add new projects to showcase.
-
-<br>
-
-## License
-
-This project is licensed under the MIT License — feel free to explore the code, but please don't copy it as your own portfolio.
 
 <br>
 
