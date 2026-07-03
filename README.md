@@ -72,14 +72,6 @@ npm run dev
 
 Every push to `master` triggers a GitHub Actions workflow that builds the project and publishes it to GitHub Pages automatically — no manual deploy step needed.
 
-<br>
-
-## What I learned
-
-Building this taught me a lot about setting up CI/CD from scratch — getting GitHub Actions to reliably build and deploy on every push took some trial and error, especially around getting the base path right for GitHub Pages. It also pushed me to think more about component structure and keeping the codebase easy to extend as I add new projects to showcase.
-
-<br>
-
 ## Contact
 
 <div align="center">
