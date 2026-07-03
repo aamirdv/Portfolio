@@ -8,10 +8,16 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
-  update-and-deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -30,24 +36,16 @@ jobs:
 
       - run: node scripts/fetch-projects.mjs
 
-      - name: Commit updated data
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add src/lib/projects-data.ts
-          if git diff --cached --quiet; then
-            echo "No changes"
-          else
-            git commit -m "auto: update projects data [skip ci]"
-            git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-            git push
-          fi
-
       - run: npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Add .nojekyll
+        run: touch ./dist/.nojekyll
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./frontend/dist
-          enable_jekyll: false
+          path: ./frontend/dist
+
+      - id: deploy
+        uses: actions/deploy-pages@v4
