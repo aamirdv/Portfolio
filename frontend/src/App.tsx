@@ -7,7 +7,7 @@ export default function App() {
   const { dark, toggle } = useTheme()
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Portfolio">
       <Layout dark={dark} toggleTheme={toggle}>
         <Routes>
           <Route path="/" element={<Home />} />
