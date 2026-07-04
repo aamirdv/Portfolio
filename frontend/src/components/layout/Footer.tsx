@@ -47,7 +47,7 @@ export function Footer() {
 
         <div className="mt-8 pt-6 border-t border-border text-center">
           <p className="text-sm text-text-muted">
-            &copy; {year} Amir&apos;s Portfolio
+            &copy; {year} Amir
           </p>
         </div>
       </div>
