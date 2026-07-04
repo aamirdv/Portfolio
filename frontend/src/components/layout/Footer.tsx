@@ -18,7 +18,7 @@ export function Footer() {
               href="#home"
               className="text-lg font-bold tracking-tight text-text hover:text-primary transition-colors"
             >
-              Amir<span className="text-text-muted">&apos;s Portfolio</span>
+              Amir
             </a>
             <p className="mt-1 text-sm text-text-secondary">
               Full-Stack Web Developer
